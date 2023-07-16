@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function check(){
+        var c1=document.getElementById("a1").value;
+        if(isNaN(c1)){
+            document.getElementById("x1").innerHTML="enter a number";
+            document.getElementById("x1").style.color='red';
+        }
+        else{
+            document.getElementById("x1").innerHTML="valid";
+            document.getElementById("x1").style.color='green';
+        }
+        var c2=document.getElementById("a2").value;
+        if(isNaN(c2)){
+            document.getElementById("x2").innerHTML="enter a number";
+            document.getElementById("x2").style.color='red';
+        }
+        else if(c2.length==5){
+            document.getElementById("x2").innerHTML="valid";
+            document.getElementById("x2").style.color='green';
+        }
+        else{
+            document.getElementById("x2").innerHTML="enter a valid roll number";
+            document.getElementById("x2").style.color='red';
+        }
+        var c3=document.getElementById("a3").value;
+        if(isNaN(c3)){
+            document.getElementById("x3").innerHTML="enter a number";
+            document.getElementById("x3").style.color='red';
+        }
+        else if(c3.length==10){
+            document.getElementById("x3").innerHTML="valid";
+            document.getElementById("x3").style.color='green';
+        }
+        else{
+            document.getElementById("x3").innerHTML="enter a valid roll number";
+            document.getElementById("x3").style.color='red';
+        }
+    }
+</script>
+<body>
+    Age: <input type="text" id="a1">
+    Roll no.<input type="text" id="a2">
+    Moblie: <input type="text" id="a3">
+    <input type="button" onclick="check()" value="OK">
+    <p id="x1"></p>
+    <p id="x2"></p>
+    <p id="x3"></p>
+</body>
+</html>
